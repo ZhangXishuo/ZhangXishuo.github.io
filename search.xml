@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Json学习笔记]]></title>
       <url>/2017/08/05/Json-Learn-Notes/</url>
-      <content type="html"><![CDATA[<p>学习SpringMVC时，需要向后台发送Json格式的模拟数据进行测试，那Json到底是什么呢？一起来学习吧！</p>
+      <content type="html"><![CDATA[<p>学习SpringMVC时，需要向后台发送Json格式的模拟数据进行测试，那Json到底是什么呢？我们为什么要用Json呢？一起来学习吧！</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h2><p>这并不是第一次接触Json，其实之前在学习微信小程序开发文档时就用到了Json。</p>
 <p>小程序有一个app.json的文件，用于配置小程序的各种属性，所以最初错误地以为Json就是一种配置文件格式。直到今天再次遇到，我们一起来探究一下Json到底是什么？</p>
 <h2 id="专业定义"><a href="#专业定义" class="headerlink" title="专业定义"></a>专业定义</h2><p>想探究Json到底是什么，自然要看一下专业的定义，我们先看看维基百科的解释。</p>
@@ -14,14 +14,7 @@
 <p>JSON 数据格式与语言无关，脱胎于JavaScript，但目前很多编程语言都支持JSON格式数据的生成和解析。JSON的官方MIME类型是application/json，文件扩展名是.json。</p>
 </blockquote>
 <p>简单来说，Json就是一种起源于JavaScript且支持多种编程语言的一种数据交换语言。</p>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>Json的语法很简单，总结为四句话：</p>
-<ul>
-<li>数据在键值对中</li>
-<li>数据由逗号分隔</li>
-<li>花括号保存对象</li>
-<li>方括号保存数组</li>
-</ul>
-<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><pre><code>&quot;name&quot; : &quot;zhangxishuo&quot;
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><pre><code>&quot;name&quot; : &quot;zhangxishuo&quot;
 </code></pre><p>左侧是名称，右侧是值。</p>
 <p>Json的值可以是：数字、字符串、布尔类型、数组、对象、null。</p>
 <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>包含在一个花括号内，就是一个对象。</p>
@@ -56,8 +49,15 @@
     ]
 }
 </code></pre><p>这里students的值为一个数组，数组中包含的是两个对象，对象间用逗号隔开。</p>
-<h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><p>了解了Json，我们要引入另一个概念：序列化。</p>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>维基百科的官方概念：</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Json的语法其实很简单，总结为四句话：</p>
+<ul>
+<li>数据在键值对中</li>
+<li>数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<h1 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h1><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>了解了Json，我们要引入另一个概念：序列化。</p>
+<p>维基百科的官方概念：</p>
 <blockquote>
 <p>序列化（serialization）在计算机科学的资料处理中，是指将数据结构或物件状态转换成可取用格式（例如存成档案，存于缓冲，或经由网络中传送），以留待后续在相同或另一台计算机环境中，能恢复原先状态的过程。</p>
 <p>依照序列化格式重新获取字节的结果时，可以利用它来产生与原始物件相同语义的副本。面向对象中的物件序列化，并不概括之前原始物件所关联的函式。这种过程也称为物件编组（marshalling）。</p>
@@ -65,31 +65,15 @@
 <p>通俗地解释一下序列化的概念：</p>
 <p>需要进行跨平台时或对象存储时，因为网络只允许字符串或二进制格式，想要传输对象，就必须把对象序列化为xml(字符串)、json(字符串)、二进制(流)。</p>
 <p>而另一台计算机可以通过反序列化将传过来的字符串或二进制格式转化为原来的对象，从而实现了在不同计算机间实现对象的传输。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>了解了Json，我们重新认识一下微信小程序的Json文件。</p>
-<pre><code>{
-    &quot;pages&quot;: [
-        &quot;pages/index/index&quot;,
-        &quot;pages/logs/index&quot;
-    ],
-    &quot;window&quot;: {
-        &quot;navigationBarTitleText&quot;: &quot;Demo&quot;
-    },
-    &quot;tabBar&quot;: {
-        &quot;list&quot;: [{
-            &quot;pagePath&quot;: &quot;pages/index/index&quot;,
-            &quot;text&quot;: &quot;首页&quot;
-        },{
-            &quot;pagePath&quot;: &quot;pages/logs/logs&quot;,
-            &quot;text&quot;: &quot;日志&quot;
-        }]
-    },
-    &quot;networkTimeout&quot;: {
-        &quot;request&quot;: 10000,
-        &quot;downloadFile&quot;: 10000
-    },
-    &quot;debug&quot;: true
-}
-</code></pre><p>对象中有五个参数，分别为pages、window、tabBar、networkTimeout、debug，pages的值为数组，window、tabBar与networkTimeout的值为对象，且tabBar中list的值为一个对象数组，debug的参数为布尔型变量。</p>
+<h2 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h2><p>那在计算机间互相传输对象有什么用呢？没错，正如我们的二级标题所言：云计算！</p>
+<blockquote>
+<p>云计算，是一种基于互联网的计算方式，通过这种方式，共享的软硬件资源和信息可以按需求提供给计算机各种终端和其他设备。</p>
+</blockquote>
+<p>好吧，这个解释很难理解，我们贴出另一条易懂的定义。</p>
+<blockquote>
+<p>云计算是一种基于因特网的超级计算模式，在远程的数据中心里，成千上万台电脑和服务器连接成一片电脑云。因此，云计算甚至可以让你体验每秒10万亿次的运算能力，拥有这么强大的计算能力可以模拟核爆炸、预测气候变化和市场发展趋势。</p>
+</blockquote>
+<p>成千上万台服务器通过序列化与反序列化的方式实现对象传输，同时计算，从而实现了强大的运算能力！</p>
 ]]></content>
       
         <categories>

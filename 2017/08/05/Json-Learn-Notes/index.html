@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="Sat Aug 05 2017 10:00:18 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Aug 05 2017 17:14:56 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Aug 05 2017 18:53:52 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "Json学习笔记",
     "url": "zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html",
     "datePublished": "Sat Aug 05 2017 10:00:18 GMT+0800",
-    "dateModified": "Sat Aug 05 2017 17:14:56 GMT+0800",
+    "dateModified": "Sat Aug 05 2017 18:53:52 GMT+0800",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -338,7 +338,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初识"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">初识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#专业定义"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">专业定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初识"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">初识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#专业定义"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">专业定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#序列化"><span class="post-toc-number">3.</span> <span class="post-toc-text">序列化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#理解"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">理解</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -485,13 +485,19 @@
         <p>学习SpringMVC时，需要向后台发送Json格式的模拟数据进行测试，那Json到底是什么呢？一起来学习吧！</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h2><p>这并不是第一次接触Json，其实之前在学习微信小程序开发文档时就用到了Json。</p>
 <p>小程序有一个app.json的文件，用于配置小程序的各种属性，所以最初错误地以为Json就是一种配置文件格式。直到今天再次遇到，我们一起来探究一下Json到底是什么？</p>
-<h2 id="专业定义"><a href="#专业定义" class="headerlink" title="专业定义"></a>专业定义</h2><p>想探究Json到底是什么，我们先看看维基百科的解释。</p>
+<h2 id="专业定义"><a href="#专业定义" class="headerlink" title="专业定义"></a>专业定义</h2><p>想探究Json到底是什么，自然要看一下专业的定义，我们先看看维基百科的解释。</p>
 <blockquote>
 <p>JSON（JavaScript Object Notation）是一种由道格拉斯·克罗克福特构想设计、轻量级的数据交换语言，以文字为基础，且易于让人阅读。尽管JSON是Javascript的一个子集，但JSON是独立于语言的文本格式，并且采用了类似于C语言家族的一些习惯。</p>
 <p>JSON 数据格式与语言无关，脱胎于JavaScript，但目前很多编程语言都支持JSON格式数据的生成和解析。JSON的官方MIME类型是application/json，文件扩展名是.json。</p>
 </blockquote>
 <p>简单来说，Json就是一种起源于JavaScript且支持多种编程语言的一种数据交换语言。</p>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>Json的语法很简单，我将其总结为数据、对象、数组三部分。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>Json的语法很简单，总结为四句话：</p>
+<ul>
+<li>数据在键值对中</li>
+<li>数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
 <h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><pre><code>&quot;name&quot; : &quot;zhangxishuo&quot;
 </code></pre><p>左侧是名称，右侧是值。</p>
 <p>Json的值可以是：数字、字符串、布尔类型、数组、对象、null。</p>
@@ -527,6 +533,15 @@
     ]
 }
 </code></pre><p>这里students的值为一个数组，数组中包含的是两个对象，对象间用逗号隔开。</p>
+<h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><p>了解了Json，我们要引入另一个概念：序列化。</p>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>维基百科的官方概念：</p>
+<blockquote>
+<p>序列化（serialization）在计算机科学的资料处理中，是指将数据结构或物件状态转换成可取用格式（例如存成档案，存于缓冲，或经由网络中传送），以留待后续在相同或另一台计算机环境中，能恢复原先状态的过程。</p>
+<p>依照序列化格式重新获取字节的结果时，可以利用它来产生与原始物件相同语义的副本。面向对象中的物件序列化，并不概括之前原始物件所关联的函式。这种过程也称为物件编组（marshalling）。</p>
+</blockquote>
+<p>通俗地解释一下序列化的概念：</p>
+<p>需要进行跨平台时或对象存储时，因为网络只允许字符串或二进制格式，想要传输对象，就必须把对象序列化为xml(字符串)、json(字符串)、二进制(流)。</p>
+<p>而另一台计算机可以通过反序列化将传过来的字符串或二进制格式转化为原来的对象，从而实现了在不同计算机间实现对象的传输。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>了解了Json，我们重新认识一下微信小程序的Json文件。</p>
 <pre><code>{
     &quot;pages&quot;: [
@@ -861,7 +876,7 @@ It will not impact the appearance and can give developers a lot of support :)
             |
             <span id="busuanzi_container_site_pv">访问次数:<span id="busuanzi_value_site_pv"></span>次</span>
             <br>
-            本站共计<span class="post-count">669</span>字
+            本站共计<span class="post-count">1,015</span>字
         </div>
 
         <!-- Paradox Footer Right Section -->

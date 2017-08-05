@@ -12,7 +12,7 @@
     
     <title>
         
-            链接 | 
+            Json学习笔记 | 
         
         张喜硕的博客
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="梦云智 张喜硕">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="ZhangXishuo JavaScript">
+    <meta name="keywords" content="ZhangXishuo JavaScript,Json">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="zhangxishuo.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="链接 | 张喜硕的博客">
+    <meta property="og:title" content="Json学习笔记 | 张喜硕的博客">
     <meta property="og:image" content="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Json"> 
 
+    
+        <meta property="article:published_time" content="Sat Aug 05 2017 10:00:18 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Aug 05 2017 10:20:35 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="链接 | 张喜硕的博客">
+    <meta name="twitter:title" content="Json学习笔记 | 张喜硕的博客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="zhangxishuo.github.io/link/index.html" />
+        <link rel="canonical" href="zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张喜硕的博客",
+        "logo": "http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "梦云智 张喜硕",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png"
+        },
+        "description": "欢迎来到我的博客！"
+    },
+    "headline": "Json学习笔记",
+    "url": "zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html",
+    "datePublished": "Sat Aug 05 2017 10:00:18 GMT+0800",
+    "dateModified": "Sat Aug 05 2017 10:20:35 GMT+0800",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "zhangxishuo.github.io"
+    }
+}
+</script>
 
 
     
@@ -280,157 +313,304 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初识"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">初识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#专业定义"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">专业定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Single Links Page -->
-    <style>
-    .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
-        text-align: center;
-        overflow: auto;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 320px;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (min-width: 680px) {
-        .md-links {
-            max-width: 640px;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    @media screen and (min-width: 1000px) {
-        .md-links {
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: 1320px) {
-        .md-links {
-            max-width: 1280px;
-        }
-    }
-
-    @media screen and (min-width: 1640px) {
-        .md-links {
-            max-width: 1600px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
-        }
-    }
-
-    .md-links-item {
-        background: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-        height: 72px;
-        line-height: 15px;
-        margin: 20px 10px;
-        padding: 0px 0px;
-        transition: box-shadow 0.25s;
-    }
-
-    .md-links a {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .md-links li {
-        width: 300px;
-        float: left;
-        list-style: none;
-    }
-
-    .md-links-item img {
-        float: left;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .md-links-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .md-links-item a:hover{
-        cursor: pointer;
-    }
-
-    .md-links-title {
-        font-size: 20px;
-        line-height: 50px;
-    }
-
-    #scheme-Paradox .mdl-mini-footer{
-        clear: left;
-    }
-    #bottom{
-        position: relative;
-    }
-</style>
-
-<ul class="md-links">
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
-        
-            <li class="md-links-item">
-                <a href="http://www.mengyunzhi.cn/" title="梦云智" target="_blank">
-                    <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/links/Yunzhi.jpg" alt="梦云智" width="72px"/>
-                    <span class="md-links-title">梦云智</span><br />
-                    <span>梦云智团队官方博客</span>
-                </a>
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Json/Json.png)">
+    
+            <p class="article-headline-p">
+                Json学习笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Post-Graduate.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>梦云智 张喜硕</strong>
+        <span>8月 05, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYklEQVR42u3aS3LCQAwFQO5/6WSbKsLwNLJlQ/WsKPBn2gtLSHr8fPV64OHh4eHh4eHh3Yz3iNff45/Pfb7mq+u/OuafjRb3hoeHhzfJe/OqXZKSK+RX6+wNDw8Pb55XfYmvkXlQOSrA4OHh4d2Tl7zQk6vlJDw8PLxP5yXbXW89T6Dx8PDw7s/L//B3br8OIRfXWvDw8PBiXqcBdvbni/t7eHh4eE+8zcGmYhq9F3gOGLrCw8PDO4G3LhlUVzVpTsq+efqOh4eHN8NLmk/5N9USQzWxLhcj8PDw8E7gJaWHPACsm2TVBH3vSDw8PLx53l4bbO+1flQpBA8PD2+SlyfBR41eJQ+rFZbw8PDwTubtDQrsBYy9lLp8Xzw8PLwRXt762kt2q6MGeyMIeHh4eDO8Tvmgny7n5Yx8b3h4eHiTvGOLEUngqQanVmDAw8PDO4hX/fN/VHJcDQN5qQIPDw9vhlctJZxRjFg/iHw/eHh4eGfzckAVloecNS9Px/Hw8PBmeHvJdLKhTlDZa33h4eHhzfOq7a68iVUt/nZadHh4eHiTvLzln4eE/Kx+ORgPDw/vKl6/rZX8mjTA8m/w8PDw5nnVVDhPqauM6oACHh4e3jyvuqolhjzhzkvJeHh4eNfyqq/jJHXufO6k2nh4eHiTvDwY5ONZnYJFa3wBDw8Pb5CXl1mrR1YfWV6MwMPDw/sU3jqE9IerOuUJPDw8vLvx8oJCXtqISgxnDF3h4eHhtXl50ysfINg7q5Vk4+Hh4Y3wOg2w6tjW3nBA8sjw8PDwZnjft/Dw8PDw8PDw8G6wfgHFXny48JOuAwAAAABJRU5ErkJggg==">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Json/">Json</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Json学习笔记&url=zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
             </li>
-        
-            <li class="md-links-item">
-                <a href="https://chuhang123.github.io/" title="楚航" target="_blank">
-                    <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/links/Chuhang.jpg" alt="楚航" width="72px"/>
-                    <span class="md-links-title">楚航</span><br />
-                    <span>梦云智 楚航的博客</span>
-                </a>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Json学习笔记&url=zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html&via=梦云智 张喜硕" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
             </li>
-        
-            <li class="md-links-item">
-                <a href="https://gaoliming123.github.io/" title="高黎明" target="_blank">
-                    <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/links/Gaoliming.png" alt="高黎明" width="72px"/>
-                    <span class="md-links-title">高黎明</span><br />
-                    <span>梦云智 高黎明的博客</span>
-                </a>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张喜硕的博客&title=Json学习笔记&summary=&pics=zhangxishuo.github.iohttp://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png&url=zhangxishuo.github.io/2017/08/05/Json-Learn-Notes/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
             </li>
-        
-            <li class="md-links-item">
-                <a href="https://zhuchenshu.github.io/" title="朱晨澍" target="_blank">
-                    <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/links/Zhuchenshu.jpg" alt="朱晨澍" width="72px"/>
-                    <span class="md-links-title">朱晨澍</span><br />
-                    <span>梦云智 朱晨澍的博客</span>
-                </a>
-            </li>
-        
-            <li class="md-links-item">
-                <a href="http://cdc.tencent.com/" title="CDC" target="_blank">
-                    <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/links/TencentCDC.png" alt="CDC" width="72px"/>
-                    <span class="md-links-title">CDC</span><br />
-                    <span>腾讯CDC的官方博客</span>
-                </a>
-            </li>
-        
+        </a>
+    
+
+    <!-- Share Telegram -->
     
 </ul>
 
-<script type="text/ls-javascript" id="page-links-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>最近学习了Web中数据传输的一种新格式————Json，让我们一起学习一下神奇的Json吧！</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h2><p>这并不是第一次接触Json，其实之前在学习微信小程序开发文档时就用到了Json。</p>
+<p>小程序有一个app.json的文件，用于配置小程序的各种属性，所以最初错误地以为Json就是一种配置文件格式。直到今天再次遇到，我们一起来探究一下Json到底是什么？</p>
+<pre><code>{
+    &quot;pages&quot;: [
+        &quot;pages/index/index&quot;,
+        &quot;pages/logs/index&quot;
+    ],
+    &quot;window&quot;: {
+        &quot;navigationBarTitleText&quot;: &quot;Demo&quot;
+    },
+    &quot;tabBar&quot;: {
+        &quot;list&quot;: [{
+            &quot;pagePath&quot;: &quot;pages/index/index&quot;,
+            &quot;text&quot;: &quot;首页&quot;
+        },{
+            &quot;pagePath&quot;: &quot;pages/logs/logs&quot;,
+            &quot;text&quot;: &quot;日志&quot;
+        }]
+    },
+    &quot;networkTimeout&quot;: {
+        &quot;request&quot;: 10000,
+        &quot;downloadFile&quot;: 10000
+    },
+    &quot;debug&quot;: true
+}
+</code></pre><h2 id="专业定义"><a href="#专业定义" class="headerlink" title="专业定义"></a>专业定义</h2><p>我们先看看Json是什么，我们先看看维基百科的解释。</p>
+<blockquote>
+<p>JSON（JavaScript Object Notation）是一种由道格拉斯·克罗克福特构想设计、轻量级的数据交换语言，以文字为基础，且易于让人阅读。尽管JSON是Javascript的一个子集，但JSON是独立于语言的文本格式，并且采用了类似于C语言家族的一些习惯。</p>
+<p>JSON 数据格式与语言无关，脱胎于JavaScript，但目前很多编程语言都支持 JSON 格式数据的生成和解析。JSON 的官方 MIME 类型是 application/json，文件扩展名是 .json。</p>
+</blockquote>
+<p>简单来说，Json就是一种起源于JavaScript且支持多种编程语言使用的一种数据交换语言。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><pre><code>&quot;name&quot; : &quot;zhangxishuo&quot;
+</code></pre><p>左侧是名称，右侧是值。</p>
+<p>Json的值可以是：数字、字符串、布尔类型、数组、对象、null。</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>包含在一个花括号内，就是一个对象。</p>
+<pre><code>{
+    &quot;name&quot;     : &quot;zhangxishuo&quot;,
+    &quot;college&quot;  : &quot;Hebei University Of Technology&quot;,
+    &quot;e-mail&quot;   : &quot;zhangxishuo1998@gmail.com&quot;,
+    &quot;location&quot; : &quot;TianJin&quot;
+}
+</code></pre><p>这就是一个Json对象，我们可以借助菜鸟工具在线解析Json，<a href="https://c.runoob.com/front-end/53" target="_blank" rel="external">https://c.runoob.com/front-end/53</a></p>
+<pre><code>object        {4}
+    name     : zhangxishuo
+    college  : Hebei University Of Technology
+    e-mail   : zhangxishuo1998@gmail.com
+    location : TianJin
+</code></pre><p>Json数据被解析为一个含有四个属性的对象。</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>Json数组包含在方括号内，一个数组中可以包含多个对象。</p>
+<pre><code>{
+    &quot;students&quot; : [
+        {
+            &quot;name&quot;     : &quot;zhangxishuo&quot;,
+            &quot;college&quot;  : &quot;Hebei University Of Technology&quot;,
+            &quot;e-mail&quot;   : &quot;zhangxishuo1998@gmail.com&quot;,
+            &quot;location&quot; : &quot;TianJin&quot;
+        },
+        {
+            &quot;name&quot;     : &quot;qiuxueying&quot;,
+            &quot;college&quot;  : &quot;Harbin Normal University&quot;,
+            &quot;e-mail&quot;   : &quot;350322953@qq.com&quot;,
+            &quot;location&quot; : &quot;Harbin&quot;
         }
-    };
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+    ]
+}
+</code></pre><p>这里students的值为一个数组，数组中包含的是两个对象，对象间用逗号隔开。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>了解了Json，我们重新认识一下微信小程序的Json文件。</p>
+<pre><code>{
+    &quot;pages&quot;: [
+        &quot;pages/index/index&quot;,
+        &quot;pages/logs/index&quot;
+    ],
+    &quot;window&quot;: {
+        &quot;navigationBarTitleText&quot;: &quot;Demo&quot;
+    },
+    &quot;tabBar&quot;: {
+        &quot;list&quot;: [{
+            &quot;pagePath&quot;: &quot;pages/index/index&quot;,
+            &quot;text&quot;: &quot;首页&quot;
+        },{
+            &quot;pagePath&quot;: &quot;pages/logs/logs&quot;,
+            &quot;text&quot;: &quot;日志&quot;
+        }]
+    },
+    &quot;networkTimeout&quot;: {
+        &quot;request&quot;: 10000,
+        &quot;downloadFile&quot;: 10000
+    },
+    &quot;debug&quot;: true
+}
+</code></pre><p>对象中有五个参数，分别为pages、window、tabBar、networkTimeout、debug，pages的值为数组，window、tabBar与networkTimeout的值为对象，且tabBar中list的值为一个对象数组，debug的参数为布尔型变量。</p>
+
+    
+
+    
+</div>
 
 
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/04/Angular-Learn-Notes/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -622,6 +802,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

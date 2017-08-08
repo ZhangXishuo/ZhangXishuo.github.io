@@ -12,7 +12,7 @@
     
     <title>
         
-            分类: 学习总结 | 
+            黑客智慧：另辟蹊径的域名 | 
         
         张喜硕的博客
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="梦云智 张喜硕">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="ZhangXishuo JavaScript">
+    <meta name="keywords" content="ZhangXishuo JavaScript,路由,DNS">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="zhangxishuo.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 学习总结 | 张喜硕的博客">
+    <meta property="og:title" content="黑客智慧：另辟蹊径的域名 | 张喜硕的博客">
     <meta property="og:image" content="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="路由"> <meta property="og:article:tag" content="DNS"> 
 
+    
+        <meta property="article:published_time" content="Mon Aug 07 2017 20:05:10 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Aug 08 2017 09:55:55 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="分类: 学习总结 | 张喜硕的博客">
+    <meta name="twitter:title" content="黑客智慧：另辟蹊径的域名 | 张喜硕的博客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="zhangxishuo.github.io/categories/学习总结/index.html" />
+        <link rel="canonical" href="zhangxishuo.github.io/2017/08/07/hacker-wisdom-special-domain/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张喜硕的博客",
+        "logo": "http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "梦云智 张喜硕",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png"
+        },
+        "description": "欢迎来到我的博客！"
+    },
+    "headline": "黑客智慧：另辟蹊径的域名",
+    "url": "zhangxishuo.github.io/2017/08/07/hacker-wisdom-special-domain/index.html",
+    "datePublished": "Mon Aug 07 2017 20:05:10 GMT+0800",
+    "dateModified": "Tue Aug 08 2017 09:55:55 GMT+0800",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "zhangxishuo.github.io"
+    }
+}
+</script>
 
 
     
@@ -278,95 +311,265 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#案例"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">案例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#拓展"><span class="post-toc-number">2.</span> <span class="post-toc-text">拓展</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DNS"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">DNS</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#域名"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">域名</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#智慧"><span class="post-toc-number">3.</span> <span class="post-toc-text">智慧</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#流程图"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">流程图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#攻击"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">攻击</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#另辟蹊径"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">另辟蹊径</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Punycode"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Punycode</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Json/Json.png">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Hacker.jpg)">
+    
+            <p class="article-headline-p">
+                黑客智慧：另辟蹊径的域名
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Post-Graduate.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>梦云智 张喜硕</strong>
+        <span>8月 07, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC10lEQVR42u3aQXLDMAgF0Nz/0u22m7gfUDK29LTKuK7F04YR8Po5cr2wsbGxsbGxsbGxb8l+xau52eUX/j6/3vH6zSRmbGxs7L3ZSeirwr0+jndP3n2nEDM2Njb2Aex3gDx55IeVk6rxYGNjY2Pn21ynk0nKmV9gsLGxsbGrCSMpKl1/P9kXGxsbG3teVKoWhnrFpuqV5uO1NGxsbOzbs/Om6X1+f7W/jY2NjX1jdm8EZ1766Y3mjCLHxsbG3pQ9Ca5XeKo2gJO/JkeDjY2NfQK7l5ZWFZv+CXpcbMLGxsbeld1LGNW2bn4cvaii97GxsbG3ZldbvL2Nk6PpNYPLjV5sbGzsjdi94PInk6DzIcsFRSVsbGzsx7J7l4RqksvLVZOGRLm/jY2Njb0duwebpLRq03f0HBsbG3trdn79mDdf59ebxbU0bGxs7Ieze8Wj6//NR3aSb1aLTVECw8bGxt6O3Ssw5eM71WZAlJC+M3OKjY2NfXt2nmASQH6U+V6TkSBsbGzsc9h5Cqm2hOdJLrlsLO5vY2NjYz+WnSe2SYl/0lqulrGwsbGxT2BPxi6ThJQfUzVBLqilYWNjYx/D7g1cjgpAgzRZ7m9jY2NjP5ydXDl6bYDJEE9e0iqUt7CxsbE3ZeeN1WopqvpOAktS19vjwMbGxj6MnVDzRJJfJyYlpH8ix8bGxt6aPfnda8quuswUClXY2NjYh7Hz1NW7wOQDlFV24SqCjY2NfQx7MiiZH8p8uKc8soONjY29Bbu6qsjoklAc0KkWm7CxsbH3Zr/ilW+ZD+gkB9FLjYVGLzY2NvYW7EnS6o1srhrNzNu92NjY2Cew5+OPzYDGa0EtDRsbG/sw9vwaM0+T5UPHxsbGxi4G1BusKYzgVEta2NjY2Aewe8Hlx5RfS5IGcPmYsLGxsbdmVws3eXB5kpu3DT7Y38bGxsa+MfuchY2NjY2NjY2NjX2b9Qt+AGg62xFzXwAAAABJRU5ErkJggg==">
+    
+</ul>
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/05/Json-Learn-Notes/">Json学习笔记</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/DNS/">DNS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/路由/">路由</a>
+    </ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            学习SpringMVC时，需要向后台发送Json格式的模拟数据进行测试，那Json到底是什么呢？我们为什么要用Json呢？一起来学习吧！
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/05/Json-Learn-Notes/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Post-Graduate.png" width="44px" height="44px" alt="梦云智 张喜硕's avatar">
-            </div>
-            <div>
-                <strong>梦云智 张喜硕</strong>
-                <span>8月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/学习总结/">学习总结</a>
-            </span>
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=黑客智慧：另辟蹊径的域名&url=zhangxishuo.github.io/2017/08/07/hacker-wisdom-special-domain/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=黑客智慧：另辟蹊径的域名&url=zhangxishuo.github.io/2017/08/07/hacker-wisdom-special-domain/index.html&via=梦云智 张喜硕" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张喜硕的博客&title=黑客智慧：另辟蹊径的域名&summary=&pics=zhangxishuo.github.iohttp://ou3yips3l.bkt.clouddn.com/MY-BLOG/Themes/Web-Logo.png&url=zhangxishuo.github.io/2017/08/07/hacker-wisdom-special-domain/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
 </div>
 
-            
-            
-        
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
+        <p>我们在浏览器地址栏输入网址，经过解析，向服务器发送请求，等待服务器返回数据，这个过程在常人看来平淡无奇，但在黑客眼中呢？</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>首先我们用火狐浏览器打开苹果公司的官方网站，<a href="https://www.apple.com/" target="_blank" rel="external">苹果官网</a></p>
+<p><img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Firefox-1.png" alt=""></p>
+<p>iPhone This is 7.与我们所期待的一致，这就是我们要访问的网页。</p>
+<p>我们再打开一个链接，<a href="https://www.аррӏе.com/" target="_blank" rel="external">未知链接</a></p>
+<p><img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Firefox-2.png" alt=""></p>
+<p>注意看浏览器的地址栏，两个网址并无二致。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>一个网址在全球范围内唯一，注册之后不能被重复注册，所以同一个网址是不可能指向两个不同的网页的。</p>
+<p>所以我们得出结论，虽然这两个网址看上去相像，但是存在我们肉眼无法分辨的差异。</p>
+<p>要解决这个问题，我们要了解的还很多，我们先来学习一下专业知识吧。</p>
+<h1 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h1><h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS对于我们访问服务器非常重要，我们来了解一下DNS的概念，我们先看看维基百科的专业解释。</p>
+<blockquote>
+<p>网域名称系统（英文：Domain Name System，缩写：DNS）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。</p>
+</blockquote>
+<p>如果没有DNS，我们访问网站需要直接对该网站的服务器提交请求，也就是我们要记住每个要访问的服务器的地址，但貌似除了谷歌的8.8.8.8和国内知名的114.114.114.114这类好记的ip地址之外，相信其他的ip用户是记不住的。</p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>正因为ip地址不容易记忆，所以人们发明了容易记忆的域名，也就是我们经常能看到的www.google.com、www.baidu.com之类的。</p>
+<p>这样，用户无需知道服务器ip，只要记住网站的域名即可。</p>
+<p>当用户通过浏览器访问域名时，会将域名的请求发送到DNS服务器，服务器再在数据库中寻找与该域名对应的ip地址，然后反馈给浏览器。</p>
+<p>浏览器通过得到的ip地址再向对应的服务器发起请求，从服务器获取网页文件，经过渲染，最后将多彩绚丽的网页呈现再用户面前。</p>
+<h1 id="智慧"><a href="#智慧" class="headerlink" title="智慧"></a>智慧</h1><h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p>上面的文字可能不好了解整个流程，我们画一个流程图理一下思路。</p>
+<p><img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Process.png" alt=""></p>
+<h2 id="攻击"><a href="#攻击" class="headerlink" title="攻击"></a>攻击</h2><p>理清了上网流程，假若我们是黑客，我们要怎么破坏用户上网呢？</p>
+<p>最直观的，可以破坏那两个圆角矩形“DNS服务器”与“网站服务器”。但一般网站对服务器的防黑措施做的很好，所以以我们的水平攻击像百度、阿里、腾讯这样的服务器基本没戏。</p>
+<p>没错，还剩下DNS服务器，这个攻破就比较容易了。</p>
+<p>记得曾经有一个上午，全国的百度都上不去了，但是百度的工作人员发现公司的服务器是正常的。黑客攻破了DNS服务器，导致网站域名无法解析，所以用户自然无法访问百度，虽然网站服务器没有任何问题。</p>
+<p>这么简单的东西，如果黑客用了这种攻击手法，那我们也没必要写一篇文章了。下面我们了解一点高端的。</p>
+<h2 id="另辟蹊径"><a href="#另辟蹊径" class="headerlink" title="另辟蹊径"></a>另辟蹊径</h2><p>我们之前说的域名，相信大家理解的与常见的都是英文域名，www.google.com之类的。但是域名只支持中文吗？</p>
+<blockquote>
+<p>开始时，域名的字符仅限于ASCII字符的一个子集。2008年，ICANN通过一项决议，允许使用其它语言作为互联网顶级域名的字符。使用基于Punycode码的IDNA系统，可以将Unicode字符串映射为有效的DNS字符集。</p>
+</blockquote>
+<p>这里有一个我们不认识的概念，顶级域名。</p>
+<blockquote>
+<p>顶级域（或顶级域名；英语：Top-level Domain；英文缩写：TLD）是互联网DNS等级之中的最高级的域，它保存于DNS根域的名字空间中。</p>
+</blockquote>
+<p>比如www.google.com，“.com”就是一个顶级域名，代码商业机构，“google”是一级域名。</p>
+<p>再比如我们的博客zhangxishuo.github.io，“io”表示英属印度洋领地的域名，“github”为一级域名，而我们用的就是github.io的子域名。</p>
+<blockquote>
+<p>互联网域名不仅支持ASCII字符，同时支持Unicode作为有效字符集。</p>
+</blockquote>
+<p>ASCII代表我们的域名仅仅可以使用表中支持的英文字符及特定字符，但若是Unicode呢？它就不仅仅只支持英文了，域名可以是“.中国”、“腾讯.cn”等，当然也可以是希腊字母、西里尔字母等。</p>
+<p>我们对比一下ASCII表中的a与Unicode表中的a：</p>
+<p><img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Hacker-a-1.png" alt=""></p>
+<p><img src="http://ou3yips3l.bkt.clouddn.com/MY-BLOG/2017/8/Hacker/Hacker-a-2.png" alt=""></p>
+<h2 id="Punycode"><a href="#Punycode" class="headerlink" title="Punycode"></a>Punycode</h2><p>经过上面的对比，相信大家已经明白了原因，域名支持多国语言，而好多语言中的字母与英文字母相像到无法分辨。</p>
+<blockquote>
+<p>Punycode（译为：域名代码）是一种表示Unicode码和ASCII码的有限的字符集。例如：“münchen”（德国慕尼黑）会被编码为“mnchen-3ya”。</p>
+<p>Punycode的目的是在于国际化域名标签（IDNA）的框架中，使这些（多语言）的域名可以编码为ASCII。编码语法在文档RFC3492[1]中规定。</p>
+</blockquote>
+<p>浏览器会通过Punycode将用户输入的域名解析为DNS服务器能够识别的ASCII码，然后去向DNS服务器请求对应的服务器IP。</p>
+<p>但是，火狐是默认不显示解析后的网址的，输入的是什么，显示的就是什么。还好这是一位技术大牛发现的，并在网址上写了一篇关于域名的博客，如果被黑客利用，制作一个足以以假乱真的网页，而域名相似到用户无法分辨，那不知会造成多少经济损失。</p>
 
     
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
 
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/05/Json-Learn-Notes/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

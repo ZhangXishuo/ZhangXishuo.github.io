@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[JavaScript学习笔记]]></title>
+      <url>/2017/08/12/javascript-learn-notes/</url>
+      <content type="html"><![CDATA[<p>在全栈的手册里，JavaScript必不可少，我们一起来学习世界上最灵活的语言————JavaScript！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 学习总结 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[黑客智慧：另辟蹊径的域名]]></title>
       <url>/2017/08/07/hacker-wisdom-special-domain/</url>
       <content type="html"><![CDATA[<p>我们在浏览器地址栏输入网址，经过解析，向服务器发送请求，等待服务器返回数据，这个过程在常人看来平淡无奇，但在黑客眼中呢？</p>
@@ -66,9 +87,9 @@
         
         <tags>
             
-            <tag> DNS </tag>
-            
             <tag> 域名 </tag>
+            
+            <tag> DNS </tag>
             
         </tags>
         
@@ -76,7 +97,7 @@
     
     <entry>
       <title><![CDATA[Json学习笔记]]></title>
-      <url>/2017/08/05/Json-Learn-Notes/</url>
+      <url>/2017/08/05/json-learn-notes/</url>
       <content type="html"><![CDATA[<p>学习SpringMVC时，需要向后台发送Json格式的模拟数据进行测试，那Json到底是什么呢？我们为什么要用Json呢？一起来学习吧！</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h2><p>这并不是第一次接触Json，其实之前在学习微信小程序开发文档时就用到了Json。</p>
 <p>小程序有一个app.json的文件，用于配置小程序的各种属性，所以最初错误地以为Json就是一种配置文件格式。直到今天再次遇到，我们一起来探究一下Json到底是什么？</p>
